@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MANATECH — Correos Corporativos Profesionales</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <style>
+    /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background-color:#111111; font-family: Arial, Helvetica, sans-serif; -webkit-text-size-adjust:100%; }
+    a { text-decoration:none; }
+    img { border:0; display:block; max-width:100%; }
+
+    /* CONTENEDOR PRINCIPAL */
+    .wrapper { width:100%; background:#111111; padding:32px 16px; }
+    .container { max-width:620px; margin:0 auto; background:#1A1A1A; border-radius:12px; overflow:hidden; border:1px solid #2D2D2D; }
+
+    /* HEADER */
+    .header { background:#0D0D0D; padding:36px 40px 28px; text-align:center; border-bottom:2px solid #3ECF8E; }
+    .logo-text { font-size:36px; font-weight:900; color:#3ECF8E; letter-spacing:4px; }
+    .logo-sub  { font-size:11px; color:#888888; letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+
+    /* HERO */
+    .hero { background:linear-gradient(135deg, #0D0D0D 0%, #1A2E22 100%); padding:40px 40px 36px; text-align:center; }
+    .hero-tag  { display:inline-block; background:#3ECF8E; color:#0D0D0D; font-size:10px; font-weight:700;
+                 letter-spacing:2px; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:16px; }
+    .hero h1   { font-size:26px; color:#FFFFFF; font-weight:800; line-height:1.3; margin-bottom:12px; }
+    .hero h1 span { color:#3ECF8E; }
+    .hero p    { font-size:15px; color:#AAAAAA; line-height:1.7; margin-bottom:24px; max-width:460px; margin-left:auto; margin-right:auto; }
+    .btn-primary { display:inline-block; background:#3ECF8E; color:#0D0D0D; font-size:14px; font-weight:800;
+                   padding:14px 36px; border-radius:8px; letter-spacing:0.5px; text-transform:uppercase; }
+    .btn-primary:hover { background:#2AAF74; }
+
+    /* BODY */
+    .body { padding:36px 40px; }
+
+    /* SECCIÓN: por qué */
+    .section-title { font-size:13px; color:#3ECF8E; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+                     margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid #2D2D2D; }
+
+    /* ÍCONOS DE BENEFICIOS */
+    .benefits { width:100%; border-collapse:collapse; margin-bottom:32px; }
+    .benefits td { padding:12px 0; vertical-align:top; }
+    .benefit-icon { width:44px; }
+    .benefit-icon-box { width:36px; height:36px; background:#1E3A2A; border-radius:8px; border:1px solid #3ECF8E;
+                        text-align:center; line-height:36px; font-size:18px; }
+    .benefit-text  { padding-left:12px; }
+    .benefit-title { font-size:14px; font-weight:700; color:#FFFFFF; margin-bottom:3px; }
+    .benefit-desc  { font-size:12px; color:#888888; line-height:1.5; }
+
+    /* PAQUETES */
+    .packages { width:100%; border-collapse:collapse; margin-bottom:32px; }
+    .pkg-header { background:#0D0D0D; padding:10px 16px; font-size:10px; color:#3ECF8E; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+    .pkg-row td { padding:14px 16px; border-bottom:1px solid #2A2A2A; vertical-align:middle; }
+    .pkg-name  { font-size:14px; font-weight:700; color:#FFFFFF; }
+    .pkg-desc  { font-size:11px; color:#888888; margin-top:2px; }
+    .pkg-price { font-size:20px; font-weight:900; color:#3ECF8E; white-space:nowrap; }
+    .pkg-price-sub { font-size:10px; color:#666666; }
+    .pkg-badge { display:inline-block; background:#1E3A2A; color:#3ECF8E; font-size:9px; font-weight:700;
+                 padding:3px 8px; border-radius:4px; border:1px solid #3ECF8E; margin-top:4px; letter-spacing:0.5px; }
+    .pkg-highlight td { background:#0F2018 !important; }
+
+    /* PROCESO */
+    .steps { width:100%; border-collapse:collapse; margin-bottom:32px; }
+    .step-cell { width:50%; padding:10px; vertical-align:top; }
+    .step-box { background:#1E1E1E; border:1px solid #2D2D2D; border-radius:8px; padding:14px 16px; }
+    .step-num { font-size:24px; font-weight:900; color:#3ECF8E; line-height:1; margin-bottom:6px; }
+    .step-title { font-size:12px; font-weight:700; color:#FFFFFF; margin-bottom:4px; }
+    .step-desc  { font-size:11px; color:#888888; line-height:1.5; }
+
+    /* TESTIMONIAL / QUOTE */
+    .quote-box { background:#0F0F0F; border-left:3px solid #3ECF8E; border-radius:0 8px 8px 0; padding:18px 20px; margin-bottom:28px; }
+    .quote-text { font-size:14px; color:#CCCCCC; font-style:italic; line-height:1.7; margin-bottom:8px; }
+    .quote-author { font-size:11px; color:#3ECF8E; font-weight:700; }
+
+    /* CTA FINAL */
+    .cta-box { background:linear-gradient(135deg, #1E3A2A 0%, #0D1F12 100%); border-radius:10px; 
+               padding:28px 32px; text-align:center; margin-bottom:8px; }
+    .cta-box h2 { font-size:20px; font-weight:800; color:#FFFFFF; margin-bottom:8px; }
+    .cta-box p  { font-size:13px; color:#AAAAAA; margin-bottom:20px; line-height:1.6; }
+    .btn-secondary { display:inline-block; background:transparent; color:#3ECF8E; font-size:13px; font-weight:700;
+                     padding:12px 28px; border-radius:8px; border:2px solid #3ECF8E; letter-spacing:0.5px; margin:4px; }
+
+    /* CONTACTO */
+    .contact-row { width:100%; border-collapse:collapse; margin-top:16px; }
+    .contact-cell { padding:8px 10px; text-align:center; }
+    .contact-icon { font-size:18px; display:block; margin-bottom:4px; }
+    .contact-label { font-size:10px; color:#666666; text-transform:uppercase; letter-spacing:1px; }
+    .contact-value { font-size:12px; color:#3ECF8E; font-weight:700; margin-top:2px; }
+
+    /* FOOTER */
+    .footer { background:#0D0D0D; padding:24px 40px; text-align:center; border-top:1px solid #1E1E1E; }
+    .footer p { font-size:10px; color:#444444; line-height:1.8; }
+    .footer a { color:#3ECF8E; }
+
+    /* DIVIDER */
+    .divider { height:1px; background:#2A2A2A; margin:24px 0; }
+
+    /* RESPONSIVE */
+    @media only screen and (max-width:480px) {
+      .body { padding:24px 20px; }
+      .hero { padding:30px 20px 28px; }
+      .hero h1 { font-size:21px; }
+      .step-cell { display:block; width:100%; }
+      .pkg-price { font-size:16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+<div class="container">
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <div class="header">
+    <div class="logo-text">MANATECH</div>
+    <div class="logo-sub">Soluciones Tecnológicas Empresariales</div>
+  </div>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <div class="hero">
+    <div class="hero-tag">✉ Correos Corporativos</div>
+    <h1>Tu empresa merece un<br/><span>correo profesional</span></h1>
+    <p>
+      Deja atrás el <em style="color:#666">@gmail.com</em> y proyecta la imagen que tu negocio merece.<br/>
+      Implementamos soluciones tecnologicas con <strong style="color:#fff">dominio propio</strong>, configuración técnica completa y soporte continuo.
+    </p>
+    <a href="https://wa.me/593964000510?text=Hola%20MANATECH%2C%20quiero%20saber%20más%20sobre%20correos%20corporativos" class="btn-primary">
+      Quiero empezar ahora
+    </a>
+  </div>
+
+  <!-- ══════════════ BODY ══════════════ -->
+  <div class="body">
+
+    <!-- Beneficios -->
+    <div class="section-title">¿Por qué con MANATECH?</div>
+    <table class="benefits" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="benefit-icon"><div class="benefit-icon-box">🌐</div></td>
+        <td class="benefit-text">
+          <div class="benefit-title">Dominio propio — ventas@tuempresa.com</div>
+          <div class="benefit-desc">Cada correo que envías construye tu marca. Genera confianza instantánea con clientes y proveedores.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="benefit-icon"><div class="benefit-icon-box">🛡</div></td>
+        <td class="benefit-text">
+          <div class="benefit-title">Configuración DNS avanzada (MX, SPF, DKIM)</div>
+          <div class="benefit-desc">Tus correos llegan a la bandeja de entrada, no al spam. Configuración técnica 100% incluida.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="benefit-icon"><div class="benefit-icon-box">☁️</div></td>
+        <td class="benefit-text">
+          <div class="benefit-title">Cloud Solutions</div>
+          <div class="benefit-desc">Drive, Meet, Docs, Calendar y más toda la productividad de Google con tu identidad corporativa.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="benefit-icon"><div class="benefit-icon-box">🎯</div></td>
+        <td class="benefit-text">
+          <div class="benefit-title">Soporte personalizado post-lanzamiento</div>
+          <div class="benefit-desc">Hablas directo con MANATECH — sin bots, sin tickets fríos, sin esperas eternas.</div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <!-- Paquetes -->
+    <div class="section-title">Paquetes diseñados para tu empresa</div>
+    <table class="packages" cellpadding="0" cellspacing="0" style="width:100%; border-radius:8px; overflow:hidden; background:#161616;">
+      <tr>
+        <td class="pkg-header">Paquete</td>
+        <td class="pkg-header" align="right">Desde</td>
+      </tr>
+      <!-- Básico -->
+      <tr class="pkg-row">
+        <td style="background:#1A1A1A; padding:14px 16px;">
+          <div class="pkg-name">Básico</div>
+          <div class="pkg-desc">3 usuarios · Starter · Ideal para freelancers y microempresas</div>
+          <div class="pkg-badge">Email profesional · DNS · Soporte</div>
+        </td>
+        <td style="background:#1A1A1A; padding:14px 16px; text-align:right; vertical-align:middle;">
+          <div class="pkg-price">$116</div>
+          <div class="pkg-price-sub">1er mes</div>
+          <div style="font-size:11px; color:#666; margin-top:2px;">+ $80/mes luego</div>
+        </td>
+      </tr>
+      <!-- Profesional DESTACADO -->
+      <tr class="pkg-row pkg-highlight" style="background:#0F2018;">
+        <td style="background:#0F2018; padding:14px 16px; border-left:3px solid #3ECF8E;">
+          <div class="pkg-name">Profesional <span style="font-size:9px; color:#0D0D0D; background:#3ECF8E; padding:2px 7px; border-radius:4px; font-weight:700; margin-left:6px;">MÁS POPULAR</span></div>
+          <div class="pkg-desc">5 usuarios · Standard · Para PYMEs activas y equipos de ventas</div>
+          <div class="pkg-badge">Email + Drive + Meet + Migración + DNS</div>
+        </td>
+        <td style="background:#0F2018; padding:14px 16px; text-align:right; vertical-align:middle;">
+          <div class="pkg-price">$495</div>
+          <div class="pkg-price-sub">1er mes</div>
+          <div style="font-size:11px; color:#666; margin-top:2px;">+ $245/mes luego</div>
+        </td>
+      </tr>
+      <!-- Empresarial -->
+      <tr class="pkg-row">
+        <td style="background:#1A1A1A; padding:14px 16px;">
+          <div class="pkg-name">Empresarial</div>
+          <div class="pkg-desc">10 usuarios · Standard · Equipos medianos con alta demanda colaborativa</div>
+          <div class="pkg-badge">Todo incluido + Migración completa</div>
+        </td>
+        <td style="background:#1A1A1A; padding:14px 16px; text-align:right; vertical-align:middle;">
+          <div class="pkg-price">$780</div>
+          <div class="pkg-price-sub">1er mes</div>
+          <div style="font-size:11px; color:#666; margin-top:2px;">+ $430/mes luego</div>
+        </td>
+      </tr>
+      <!-- Corporativo -->
+      <tr class="pkg-row">
+        <td style="background:#1A1A1A; padding:14px 16px; border-bottom:none;">
+          <div class="pkg-name">Corporativo</div>
+          <div class="pkg-desc">20+ usuarios · Plus · Empresas grandes con máxima seguridad</div>
+          <div class="pkg-badge">Soporte prioritario · 5TB · 500 participantes Meet</div>
+        </td>
+        <td style="background:#1A1A1A; padding:14px 16px; border-bottom:none; text-align:right; vertical-align:middle;">
+          <div class="pkg-price" style="font-size:14px;">Cotizar</div>
+          <div class="pkg-price-sub">personalizado</div>
+        </td>
+      </tr>
+    </table>
+
+    <p style="font-size:10px; color:#555; text-align:center; margin-top:8px; margin-bottom:28px;">
+      * Todos los precios en USD · Pago 1er mes incluye configuración completa · Desde el 2do mes solo licencias + soporte
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Proceso -->
+    <div class="section-title">Cómo trabajamos</div>
+    <table class="steps" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="step-cell" style="padding-left:0;">
+          <div class="step-box">
+            <div class="step-num">01</div>
+            <div class="step-title">Diagnóstico</div>
+            <div class="step-desc">Evaluamos tus necesidades, dominio actual y equipo de trabajo.</div>
+          </div>
+        </td>
+        <td class="step-cell" style="padding-right:0;">
+          <div class="step-box">
+            <div class="step-num">02</div>
+            <div class="step-title">Configuración técnica</div>
+            <div class="step-desc">DNS, MX, SPF, DKIM. Todo listo para que el correo llegue siempre.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="step-cell" style="padding-left:0; padding-top:0;">
+          <div class="step-box">
+            <div class="step-num">03</div>
+            <div class="step-title">Implementación</div>
+            <div class="step-desc">Creamos las cuentas, alias y migramos correos anteriores si es necesario.</div>
+          </div>
+        </td>
+        <td class="step-cell" style="padding-right:0; padding-top:0;">
+          <div class="step-box">
+            <div class="step-num">04</div>
+            <div class="step-title">Entrega y soporte</div>
+            <div class="step-desc">Capacitamos al equipo y quedamos disponibles para cualquier consulta.</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Quote -->
+    <div class="quote-box">
+      <div class="quote-text">"Un correo @gmail en una propuesta comercial puede costarte un cliente. Un correo @tuempresa.com puede ganártelo. La inversión es mínima, el impacto es enorme."</div>
+      <div class="quote-author">Angel Cedeño, Ingeniero en Sistemas · MANATECH</div>
+    </div>
+
+    <!-- CTA Final -->
+    <div class="cta-box">
+      <h2>¿Listo para proyectar una imagen profesional?</h2>
+      <p>
+        La implementación toma 24–48 horas.<br/>
+        Sin contratos largos, sin complicaciones técnicas nosotros nos encargamos de todo.
+      </p>
+      <a href="https://wa.me/593964000510?text=Hola%20MANATECH%2C%20quiero%20cotizar%20correos%20corporativos" class="btn-primary" style="margin-right:8px;">
+        💬 Escribir por WhatsApp
+      </a>
+      <br/><br/>
+      <a href="mailto:admin2403@manatech.blog" class="btn-secondary">
+        ✉ Enviar un correo
+      </a>
+    </div>
+
+    <!-- Contacto -->
+    <table class="contact-row" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="contact-cell">
+          <span class="contact-icon">📧</span>
+          <div class="contact-label">Correo</div>
+          <div class="contact-value"><a href="mailto:admin2403@manatech.blog" style="color:#3ECF8E;">admin2403@manatech.blog</a></div>
+        </td>
+        <td class="contact-cell">
+          <span class="contact-icon">📱</span>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value"><a href="https://wa.me/593964000510" style="color:#3ECF8E;">+593 964 000 510</a></div>
+        </td>
+        <td class="contact-cell">
+          <span class="contact-icon">🌐</span>
+          <div class="contact-label">Web</div>
+          <div class="contact-value"><a href="https://manatech.blog" style="color:#3ECF8E;">manatech.blog</a></div>
+        </td>
+      </tr>
+    </table>
+
+  </div><!-- /body -->
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <div class="footer">
+    <p>
+      © 2026 MANATECH — Soluciones Tecnológicas Empresariales<br/>
+      Quito, Pichincha, Ecuador<br/>
+      <br/>
+      Recibiste este correo porque manifestaste interés en soluciones tecnológicas para tu empresa.<br/>
+      <a href="{{ unsubscribe }}">Derechos reservados</a> · <a href="{{ privacy_policy }}">Política de privacidad</a>
+    </p>
+  </div>
+
+</div><!-- /container -->
+</div><!-- /wrapper -->
+</body>
+</html>
